@@ -4,7 +4,7 @@ import { launchImageLibrary } from 'react-native-image-picker'; // Add this for 
 import styles from '../Styles'; // Your custom styles
 
 
-export default function CreateScreen() {
+export default function CreateScreen(edit = null) {
     const [featureImage, setFeatureImage] = useState(null);
     const [name, setName] = useState('');
     const [materials, setMaterials] = useState('');
@@ -26,9 +26,6 @@ export default function CreateScreen() {
       });
     };
   
-  
-
-
       // Function to handle tag selection/deselection
     const handleTagPress = (tag) => {
         if (tags.includes(tag)) {
