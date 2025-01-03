@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, FlatList, Button, Image } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker'; // Add this for image picking
 import styles from '../Styles'; // Your custom styles
 import { useNavigation } from '@react-navigation/native';
