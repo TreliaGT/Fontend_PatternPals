@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, FlatList, Button, Image } from 'react-native';
 import { launchImageLibrary } from 'react-native-image-picker'; // Add this for image picking
 import styles from '../Styles'; // Your custom styles
-
+import { useNavigation } from '@react-navigation/native';
 
 export default function CreateScreen(edit = null) {
     const [featureImage, setFeatureImage] = useState(null);
@@ -12,7 +12,7 @@ export default function CreateScreen(edit = null) {
     const [youtubeLink, setYoutubeLink] = useState('');
     const [pdfLink, setPdfLink] = useState('');
     const [tags, setTags] = useState([]);
-    const [newTag, setNewTag] = useState('');
+    const navigation = useNavigation();
   
     // Predefined tags
     const predefinedTags = ['Crochet', 'Knitting', 'Sewing', 'DIY', 'Craft', 'Technology', 'Patterns'];
@@ -36,7 +36,6 @@ export default function CreateScreen(edit = null) {
     };
   
     const handleSubmit = () => {
-      // Handle the form submission logic here
       const formData = {
         featureImage,
         name,
@@ -46,8 +45,9 @@ export default function CreateScreen(edit = null) {
         pdfLink,
         tags,
       };
-      console.log('Form Data:', formData); // For now, just logging it
-      // You can submit formData to an API or handle as needed
+      
+      // Navigate to the ShowScreen and pass the form data
+      navigation.navigate('Pattern', formData);
     };
   
     return (

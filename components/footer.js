@@ -15,22 +15,22 @@ export default function FooterMenu() {
                     styles.icon,
                 ]} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}>
+            <TouchableOpacity style={styles.menuItem} onPress={() => navigateToScreen('Liked')}>
                 <Image source={require('../assets/icons/knitting_heart.png')} style={[
                     styles.icon,
                 ]} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}>
+            <TouchableOpacity style={styles.menuItem} onPress={() => navigateToScreen('Friend')}>
                 <Image source={require('../assets/icons/two-friends.png')} style={[
                     styles.icon,
                 ]} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}>
+            <TouchableOpacity style={styles.menuItem} onPress={() => navigateToScreen('Guide')}>
                 <Image source={require('../assets/icons/tape-measure.png')} style={[
                     styles.icon,
                 ]} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.menuItem}>
+            <TouchableOpacity style={styles.menuItem} onPress={() => navigateToScreen('Settings')}>
                 <Image source={require('../assets/icons/settings.png')} style={[
                     styles.icon,
                 ]} />
